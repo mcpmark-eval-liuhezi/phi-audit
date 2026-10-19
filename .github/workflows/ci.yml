@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Greeting
+        run: echo "phi-audit CI is running"
+      - name: Environment info
+        run: echo "Runner: $(uname -a)"
